@@ -1,0 +1,49 @@
+@import './variables';
+
+@mixin rgba($type, $color, $percentage, $shade: ligthen) {
+  @if $shade == lighten {
+    @if $type == color {
+      color: solid-lighten($color, $percentage);
+      color: rgba($color, $percentage);
+    }
+    @if $type == bg {
+      background-color: solid-lighten($color, $percentage);
+      background-color: rgba($color, $percentage);
+    }
+  } @else {
+    @if $type == color {
+      color: solid-darken($color, $percentage);
+      color: rgba($color, $percentage);
+    }
+    @if $type == bg {
+      background-color: solid-darken($color, $percentage);
+      background-color: rgba($color, $percentage);
+    }
+  }
+}
+
+@mixin shadows($shadow1, $shadow2: false, $shadow3: false, $shadow4: false, $shadow5: false) {
+  $params: $shadow1;
+  @if $shadow2 {
+    $params: $shadow1, $shadow2;
+  }
+  @if $shadow3 != false {
+    $params: $shadow1, $shadow2, $shadow3;
+  }
+  @if $shadow4 != false {
+    $params: $shadow1, $shadow2, $shadow3, $shadow4;
+  }
+  @if $shadow5 != false {
+    $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5;
+  }
+
+  box-shadow: $params;
+}
+
+@mixin tile {
+  @include rgba(bg, $white-color, 1, lighten);
+  @include shadows(0 1px 3px $shade-12, 0 1px 2px $shade-24);
+  border-radius: 3px;
+  transition: .2s ease-out-quint;
+  padding: 1rem;
+}

@@ -1,0 +1,20 @@
+@import './variables';
+
+// Base Styles
+///////////////////////////////////
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: darken($base-color, 6%);
+  height: 100%;
+  margin: 0;
+  padding: 3.1em 0 0;
+  transition: .2s ease-out-quint;
+  width: 100%;
+}
