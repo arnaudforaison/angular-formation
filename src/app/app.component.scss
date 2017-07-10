@@ -1,0 +1,25 @@
+@import 'src/sass/main';
+
+.header {
+  background-color: $heading-color;
+  color: white;
+  padding: 2rem;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    li {
+      list-style-type: none;
+
+      &.fa-home {
+        font-size: 2.5rem;
+      }
+
+      &.active {
+        color: $text-color;
+      }
+    }
+  }
+}
