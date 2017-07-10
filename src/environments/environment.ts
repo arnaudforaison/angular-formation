@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    collaborateur: 'http://31.ip-51-254-217.eu:3001/api/v1/people'
+  }
 };
