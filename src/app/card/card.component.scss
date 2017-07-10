@@ -21,5 +21,14 @@
 
   &__description {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &__buttons {
+      align-self: flex-end;
+      .fa-trash {
+        color: firebrick;
+      }
+    }
   }
 }
