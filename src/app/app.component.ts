@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { admin } from './collaborateur';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor() { }
+  admin: any;
+  constructor() {
+    this.admin = admin;
+  }
 
   ngOnInit() {
+  }
+
+  deletePerson() {
+    console.log('Person deleted');
   }
 
 }
