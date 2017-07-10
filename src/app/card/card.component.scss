@@ -2,4 +2,24 @@
 
 .card {
   @include tile;
+
+  &__title {
+    border-bottom: 1px solid lightgrey;
+
+    &.office {
+      &:before {
+        font-size: 1rem;
+        padding: 0 .8rem;
+        content: 'CDS';
+        color: $white-color;
+        background-color: $text-color;
+        margin: .5rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  &__description {
+    padding: 1rem;
+  }
 }
