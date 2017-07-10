@@ -1,11 +1,9 @@
 <header class="header">
   <ul class="w30">
-    <li class="button fa fa-home"></li>
-      <li class="button">Administrateur</li>
-      <li class="button">Ajout collaborateur</li>
+    <li class="button fa fa-home" [routerLink]="['/home']" [routerLinkActive]="['active']"></li>
+      <li class="button" [routerLink]="['/admin']" [routerLinkActive]="['active']">Administrateur</li>
+      <li class="button" [routerLink]="['/add']" [routerLinkActive]="['active']">Ajout collaborateur</li>
   </ul>
 </header>
 
-<section class="w80 center grid has-gutter ptm pbm">
-  <app-card [person]="admin" (onDelete)="deletePerson($event)"></app-card>
-</section>
+<router-outlet></router-outlet>
