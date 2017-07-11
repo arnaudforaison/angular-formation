@@ -1,9 +1,11 @@
 <header class="header">
   <ul class="w30">
     <li class="button fa fa-home" [routerLink]="['/home']" [routerLinkActive]="['active']"></li>
-      <li class="button" [routerLink]="['/admin']" [routerLinkActive]="['active']">Administrateur</li>
-      <li class="button" [routerLink]="['/add']" [routerLinkActive]="['active']">Ajout collaborateur</li>
+    <li class="button" [routerLink]="['/admin']" [routerLinkActive]="['active']">Administrateur</li>
+    <li class="button" [routerLink]="['/add']" [routerLinkActive]="['active']">Ajout collaborateur</li>
   </ul>
 </header>
 
-<router-outlet></router-outlet>
+<section class="content">
+  <router-outlet></router-outlet>
+</section>

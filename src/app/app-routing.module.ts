@@ -8,7 +8,7 @@ import { PersonGuard } from './person.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, resolve: { data: PersonGuard } },
+  { path: 'home', component: HomeComponent, resolve: { people: PersonGuard } },
   { path: 'admin', component: AdminComponent },
   { path: 'add', component: FormPersonComponent },
 ];

@@ -4,9 +4,3 @@ export const admin = {
   isCDS: true
 
 };
-
-export interface Person {
-  firstname: string;
-  lastname: string;
-  isCDS: boolean;
-}

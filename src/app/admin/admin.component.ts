@@ -1,3 +1,5 @@
+import { PeopleService } from '../shared/services/people.service';
+
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { environment } from 'environments/environment';
@@ -13,23 +15,17 @@ export class AdminComponent implements OnInit {
 
   admin: any;
 
-  constructor(private http: Http) { }
+  constructor(private peopleService: PeopleService) { }
 
   ngOnInit() {
     const endpoint = `${environment.api.collaborateur}/1`;
-    this.http.get(endpoint)
-      .map(response => response.json().data)
-      .subscribe(person => {
-        this.admin = person;
-      });
+    this.peopleService.retrievePerson(1).subscribe(person => {
+      this.admin = person;
+    });
   }
 
   deletePerson() {
-    console.log('Delete person');
-    this.http.delete(`${environment.api.collaborateur}/1`).subscribe(() => {
-      this.admin = undefined;
-      console.log('Deleted succesfully');
-    });
+    this.peopleService.deletePerson(1);
   }
 
 }

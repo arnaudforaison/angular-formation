@@ -1,6 +1,6 @@
 <section class="card w20" *ngIf="person">
   <div class="grid has-gutter card__title txtcenter" [class.office]="person.isCDS">
-    <h4>{{ person.firstname }} {{ person.lastname }}</h4>
+    <h4>{{ person.firstname }} {{ person.lastname | uppercase }}</h4>
   </div>
   <div class="card__description">
     <p>Description</p>
