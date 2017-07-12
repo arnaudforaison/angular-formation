@@ -1,1 +1,3 @@
-<app-card *ngFor="let person of people | async" [person]="person" (onDelete)="deletePerson($event)"></app-card>
+<div class="grid-4 has-gutter-xl">
+  <app-card *ngFor="let person of people | async" [person]="person" (onDelete)="deletePerson($event)"></app-card>
+</div>

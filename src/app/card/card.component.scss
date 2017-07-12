@@ -2,6 +2,8 @@
 
 .card {
   @include tile;
+  width: 100%;
+  margin-top: 3rem;
 
   &__title {
     border-bottom: 1px solid lightgrey;

@@ -1,8 +1,8 @@
-import { Person } from '../collaborateur';
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Person } from 'app/shared/services/people.service';
 import { Observable } from 'rxjs/Rx';
+
 
 @Component({
   selector: 'app-home',
